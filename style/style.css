@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+
+  background-size: 800% 800%;
+
+  animation: bgAnimation 15s ease infinite;
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  width: 320px;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border-radius: 25px;
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+
+  animation: fade 0.8s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  width: 140px;
+  height: 140px;
+
+  border-radius: 50%;
+
+  margin-bottom: 15px;
+
+  border: 3px solid #80949c;
+
+  box-shadow:
+    0 0 10px #00bfff,
+    0 0 30px rgba(0, 191, 255, 0.4);
+  object-fit: cover;
+  animation: flutuar 5s ease-in-out infinite;
+}
+@keyframes flutuar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #b5c4cc;
+
+  font-size: 15px;
+
+  margin-bottom: 25px;
+}
+
+.link {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  padding: 14px;
+
+  margin: 12px 0;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  color: white;
+
+  transition: 0.3s;
+}
+
+.link i {
+  font-size: 20px;
+}
+
+.link:hover {
+  background: rgba(255, 255, 255, 0.15);
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* FOOTER */
+
+.footer {
+  position: fixed;
+
+  bottom: 15px;
+
+  width: 100%;
+
+  text-align: center;
+
+  font-size: 13px;
+
+  color: #b5c4cc;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+
+    padding: 30px 20px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .link {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
